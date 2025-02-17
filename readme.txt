@@ -1,16 +1,17 @@
 === Coupon Exporter for WooCommerce ===
-Contributors: reliefcreation
-Donate link: https://github.com/Reliefcreation/WordPress-plugin-rwc-coupon-exporter/
-Author URI: https://reliefcreation.com/
-Tags: woocommerce, coupons, export, csv
-Requires at least: 5.0
-Tested up to: 6.7
-Requires PHP: 7.4
-WC requires at least: 6.0
-WC tested up to: 8.0
-Stable tag: 1.4
-License: GPL v2 or later
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Contributors: reliefcreation  
+Plugin URI: https://github.com/Reliefcreation/WordPress-plugin-rwc-coupon-exporter  
+Author: RELIEF Creation  
+Author URI: https://reliefcreation.com/  
+Tags: woocommerce, coupons, export, csv  
+Requires at least: 5.0  
+Tested up to: 6.7  
+Requires PHP: 7.4  
+WC requires at least: 3.0  
+WC tested up to: 8.5  
+Stable tag: 1.3
+License: GPL v2 or later  
+License URI: https://www.gnu.org/licenses/gpl-2.0.html  
 
 
 Export WooCommerce coupons to a CSV file easily and efficiently.
