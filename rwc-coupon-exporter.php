@@ -75,7 +75,7 @@ function rwc_coupon_exporter_page() {
 // Handle export
 function rwc_coupon_exporter_process() {
     // Verify nonce first
-    if (!isset($_POST['rwc_coupon_export_nonce'])) {
+    if (!isset($_POST['rwc_coupon_export_nonce']) || !isset($_POST['action'])) {
         wp_die(
             esc_html__('Unauthorized action', 'rwc-coupon-exporter'),
             esc_html__('Error', 'rwc-coupon-exporter'),
@@ -83,10 +83,11 @@ function rwc_coupon_exporter_process() {
         );
     }
 
-    // Properly unslash and sanitize nonce
-    $raw_nonce = wp_unslash($_POST['rwc_coupon_export_nonce']);
-    $nonce = sanitize_text_field($raw_nonce);
+    // Properly sanitize and validate inputs
+    $nonce = sanitize_text_field(wp_unslash($_POST['rwc_coupon_export_nonce']));
+    $action = sanitize_text_field(wp_unslash($_POST['action']));
     
+    // Verify nonce
     if (!wp_verify_nonce($nonce, 'rwc_coupon_export_nonce')) {
         wp_die(
             esc_html__('Unauthorized action', 'rwc-coupon-exporter'),
@@ -94,16 +95,8 @@ function rwc_coupon_exporter_process() {
             array('response' => 403)
         );
     }
-
-    // Verify this is a proper admin action
-    if (!isset($_POST['action'])) {
-        return;
-    }
-
-    // Properly unslash and sanitize action
-    $raw_action = wp_unslash($_POST['action']);
-    $action = sanitize_text_field($raw_action);
     
+    // Verify action
     if ($action !== 'rwc_export_coupons') {
         return;
     }
