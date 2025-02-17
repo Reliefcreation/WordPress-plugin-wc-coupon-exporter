@@ -1,14 +1,17 @@
 === Coupon Exporter for WooCommerce ===
-Contributors: RELIEF Creation
-link: https://github.com/Reliefcreation/WordPress-plugin-wc-coupon-exporter/
+Contributors: reliefcreation
+Donate link: https://github.com/Reliefcreation/WordPress-plugin-rwc-coupon-exporter/
 Author URI: https://reliefcreation.com/
-Tags: WooCommerce, coupons, export, CSV
+Tags: woocommerce, coupons, export, csv
 Requires at least: 5.0
-Tested up to: 6.4
+Tested up to: 6.7
 Requires PHP: 7.4
-Stable tag: 1.3
+WC requires at least: 6.0
+WC tested up to: 8.0
+Stable tag: 1.4
 License: GPL v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
+
 
 Export WooCommerce coupons to a CSV file easily and efficiently.
 
@@ -17,13 +20,15 @@ Export WooCommerce coupons to a CSV file easily and efficiently.
 The Coupon Exporter for WooCommerce plugin allows you to export all your WooCommerce coupons into a CSV file. This is particularly useful for backup, analysis, or migration purposes.
 
 = Key Features =
-* Export WooCommerce coupons with a single click.
-* Generate CSV files containing coupon details (code, discount type, amount, etc.).
-* Compatible with the latest WooCommerce version.
+* Export all WooCommerce coupons to CSV with one click
+* Includes comprehensive coupon data: code, description, discount type, amount, expiry date, minimum spend, usage limits, product restrictions, and email restrictions
+* Secure export process with proper data sanitization
+* Compatible with the latest WooCommerce version
+* Support for WordPress multisite installations
 
 == Installation ==
 
-1. Upload the plugin files to the `/wp-content/plugins/wc-coupon-exporter/` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/plugins/rwc-coupon-exporter/` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress.
 3. Ensure WooCommerce is installed and activated.
 4. Access the "Export Coupons" menu under WooCommerce to start exporting.
@@ -34,7 +39,21 @@ The Coupon Exporter for WooCommerce plugin allows you to export all your WooComm
 Yes, WooCommerce must be installed and activated for this plugin to work.
 
 = What data is exported in the CSV file? =
-The exported file includes coupon details such as code, discount type, amount, expiry date, and usage restrictions.
+The exported CSV file includes:
+* Coupon code
+* Description
+* Discount type
+* Amount
+* Expiry date
+* Minimum spend requirement
+* Maximum usage limit
+* Usage limit per user
+* Product restrictions
+* Category restrictions
+* Email restrictions
+
+= Is the plugin compatible with WordPress multisite? =
+Yes, the plugin is fully compatible with WordPress multisite installations.
 
 == Screenshots ==
 
@@ -42,21 +61,27 @@ The exported file includes coupon details such as code, discount type, amount, e
 
 == Changelog ==
 
+= 1.3 =
+* Added multisite support
+* Improved security with proper data sanitization
+* Enhanced error handling and logging
+* Updated compatibility with latest WordPress and WooCommerce versions
+
 = 1.2 =
-* Improved export functionality.
-* Fixed minor bugs.
+* Improved export functionality
+* Fixed minor bugs
 
 = 1.1 =
-* Added compatibility with WooCommerce 6.0+.
-* Enhanced UI for the export page.
+* Added compatibility with WooCommerce 6.0+
+* Enhanced UI for the export page
 
 = 1.0 =
-* Initial release.
+* Initial release
 
 == Upgrade Notice ==
 
-= 1.2 =
-Make sure you have the latest version of WooCommerce for compatibility.
+= 1.3 =
+This version adds multisite support and improves security. Compatible with the latest WordPress and WooCommerce versions.
 
 == License ==
 
